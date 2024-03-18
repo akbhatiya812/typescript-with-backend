@@ -35,7 +35,6 @@ export const createOrder = async (req:Request,res: Response,next:NextFunction) =
         });
 
         const newOrder = new Order(order);
-        console.log(newOrder);
         await newOrder.save();
 
     }catch(err){
