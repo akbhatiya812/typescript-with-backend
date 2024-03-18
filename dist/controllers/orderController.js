@@ -25,7 +25,7 @@ const createOrder = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
             html: (0, nodemailer_1.renderTemplate)({ orderAmount, firstName, lastName }, '/mail1.ejs')
         });
         const newOrder = new Order_1.default(order);
-        console.log(newOrder);
+
         yield newOrder.save();
     }
     catch (err) {
